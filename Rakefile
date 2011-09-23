@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-C3slWeb::Application.load_tasks
+C3sl::Application.load_tasks
