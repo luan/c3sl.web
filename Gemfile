@@ -5,6 +5,7 @@ gem 'sqlite3'
 
 gem "haml"
 gem "haml-rails"
+gem "jquery-rails"
 
 group :assets do
   gem 'sass-rails'
@@ -23,3 +24,7 @@ gem "rspec-rails", :group => [:development, :test]
 gem "capybara", :group => [:development, :test]
 gem "factory_girl_rails", :group => :test
 
+gem "devise"
+gem "paperclip", "~> 2.4"
+gem 'rails-i18n'
+gem 'awesome_nested_set'

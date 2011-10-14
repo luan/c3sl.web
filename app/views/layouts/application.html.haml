@@ -1,11 +1,23 @@
-!!! 5
 %html
   %head
-    %title c3sl
+    %title C3SL - Centro de Computação Científica e Software Livre
     = stylesheet_link_tag :application
     = javascript_include_tag :application
     = csrf_meta_tags
   %body
-    - flash.each do |name, msg|
-      = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
-    = yield
+    #wrap
+      %header#main
+        = link_to image_tag('logo.png'), root_path
+        %span.logo= link_to "Centro de Computação Científica e Software Livre", root_path
+      %nav#menu
+        %ul
+          %li= link_to "pesquisa", '#'
+          %li= link_to "software livre", '#'
+          %li= link_to "equipe", '#'
+          %li= link_to "espelhos", mirrors_path
+      %section#content
+        #shadow
+        = yield
+        %br.clear
+      %footer
+      

@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'Santana';
+  src: url('/fonts/Santana-webfont.eot');
+  src: url('/fonts/Santana-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Santana-webfont.woff') format('woff'),
+       url('/fonts/Santana-webfont.ttf') format('truetype'),
+       url('/fonts/Santana-webfont.svg#UbuntuTitle') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('/fonts/DroidSans-webfont.eot');
+    src: url('/fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/DroidSans-webfont.woff') format('woff'),
+         url('/fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('/fonts/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('/fonts/DroidSans-Bold-webfont.eot');
+    src: url('/fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('/fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('/fonts/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+  font: normal 14px Arial, Helvetica, sans-serif;
+  color: 333;
+  background: #9CB70A;
+  background: image-url('bg.png') repeat;
+  line-height: 21px;
+}
+
+div#wrap {
+  margin: auto;
+  padding: 0;
+  width: 978px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 5px #333333;
+  -moz-box-shadow: 0px 3px 5px #333333;
+  box-shadow: 0px 3px 5px #333333;
+}
+
+header#main {
+  background-color:#a4c27e;
+  background-image: -moz-linear-gradient(90deg, #a4c27e, #e5fcbd 150px);
+  background-image: -webkit-linear-gradient(90deg, #a4c27e, #e5fcbd 150px);
+  background-image: -o-linear-gradient(90deg, #a4c27e, #e5fcbd 150px);
+  background-image: -ms-linear-gradient(90deg, #a4c27e, #e5fcbd 150px);
+  background-image: linear-gradient(90deg, #a4c27e, #e5fcbd 150px);
+  -webkit-box-shadow: 0px 2px 5px #333333;
+  -moz-box-shadow: 0px 2px 5px #333333;
+  box-shadow: 0px 2px 5px #333333;
+  height: 110px;
+
+  span.logo > a {
+    position: relative;
+    bottom: 50px;
+    color: #000;
+    font-family: 'Santana', sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    text-shadow: -1px -1px 0px #CCC;
+    &:hover {
+      opacity: .65;
+    }
+  }
+  img {
+    position: relative;
+    right: 20px;
+    top: 10px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    &:hover {
+      -webkit-transform: scale(1.1) rotate(-5deg);
+      -moz-transform: scale(1.1) rotate(-5deg);
+      -o-transform: scale(1.1) rotate(-5deg);
+      -ms-transform: scale(1.1) rotate(-5deg);
+      transform: scale(1.1) rotate(-5deg);
+    }
+  }
+}
+
+nav#menu {
+  position: relative;
+  bottom: 20px;
+  float: right;
+  background: #fff;
+  -webkit-box-shadow: 0px 2px 5px #333333;
+  -moz-box-shadow: 0px 2px 5px #333333;
+  box-shadow: 0px 2px 5px #333333;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font: bold 13px DroidSansBold, Verdana,sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #bee092;
+  background-image: -moz-linear-gradient(85deg, #bee092, #e5fcbd 150px,#999999 20px);
+  background-image: -webkit-linear-gradient(85deg, #bee092, #e5fcbd 150px,#999999 20px);
+  background-image: -o-linear-gradient(85deg, #bee092, #e5fcbd 150px,#999999 20px);
+  background-image: -ms-linear-gradient(85deg, #bee092, #e5fcbd 150px,#999999 20px);
+  background-image: linear-gradient(85deg, #bee092, #e5fcbd 150px,#999999 20px);
+
+  ul {
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    li {
+      display: inline;
+      a {
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        padding: 5px 15px;
+        text-decoration: none;
+        color: #64645D;
+        text-shadow: 1px 1px 1px white;
+        border-radius: 5px;
+        &:hover {
+          color: #17586E;
+          background: #EFEFE9;
+        }
+      }
+    }
+  }
+}
+
+section#content {
+  padding: 5px;
+  article {
+    margin: 10px;
+    text-align: justify;
+  }
+  article#mirrors {
+    ul {
+      padding: 0;
+      list-style: none;
+      li > a {
+        float: left;
+      }
+    }
+  }
+  article#home {
+    margin: 10px;
+    float: left;
+    text-align: justify;
+    width: 500px
+  }
+  br.clear {
+    clear: both;
+  }
+  footer {
+    section {
+      font-family: DroidSansRegular;
+      float: left;
+      margin-left: 10px;
+      margin-right: 12%;
+      &:last-child {
+        margin-right: 0;
+        float: right;
+      }
+    }
+  }
+}

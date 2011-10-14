@@ -1,0 +1,58 @@
+pt-BR:
+  admin:
+    dashboard:
+      navigation: Navegação
+
+  attributes:
+    created_at: Criado em
+    updated_at: Atualizado em
+    name: Nome
+    title: Título
+    image: Imagem
+    description: Descrição
+    body: Conteúdo
+
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+      
+      category:
+        one: Categoria
+        other: Categorias
+      
+      article:
+        one: Notícia
+        other: Notícias
+      
+      mirror:
+        one: Espelho
+        other: Espelhos
+      
+      person:
+        one: Pessoa
+        other: Pessoas
+      
+      project:
+       one: Projeto
+       other: Projetos
+
+      sponsor:
+        one: Apoio
+        other: Apoio
+      
+      research:
+        one: Pesquisa
+        other: Pesquisas
+      
+    attributes:
+      article:
+        headline: Manchete
+        published_at: Publicado em
+      person:
+        category: Categoria
+        degree: Formação
+      category:
+        parent: Pai
+        
