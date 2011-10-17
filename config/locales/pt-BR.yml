@@ -17,23 +17,23 @@ pt-BR:
       user:
         one: Usuário
         other: Usuários
-      
+
       category:
         one: Categoria
         other: Categorias
-      
+
       article:
         one: Notícia
         other: Notícias
-      
+
       mirror:
         one: Espelho
         other: Espelhos
-      
+
       person:
         one: Pessoa
         other: Pessoas
-      
+
       project:
        one: Projeto
        other: Projetos
@@ -41,11 +41,11 @@ pt-BR:
       sponsor:
         one: Apoio
         other: Apoio
-      
+
       research:
         one: Pesquisa
         other: Pesquisas
-      
+
     attributes:
       article:
         headline: Manchete
@@ -55,4 +55,4 @@ pt-BR:
         degree: Formação
       category:
         parent: Pai
-        
+

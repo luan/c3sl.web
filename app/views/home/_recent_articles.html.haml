@@ -1,0 +1,5 @@
+%aside#recents
+  %h1 Últimas notícias
+  %ul
+    - @articles.each do |article|
+      %li= link_to article.title, "#"

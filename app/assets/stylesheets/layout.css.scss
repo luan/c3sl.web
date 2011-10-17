@@ -31,6 +31,12 @@
     font-style: normal;
 }
 
+$wrap_width: 978px;
+
+html, body {
+  height: 100%;
+}
+
 body {
   font: normal 14px Arial, Helvetica, sans-serif;
   color: 333;
@@ -40,13 +46,33 @@ body {
 }
 
 div#wrap {
+  min-height: 100%;
+  position: relative;
+
   margin: auto;
   padding: 0;
-  width: 978px;
+  width: $wrap_width;
   background: #ffffff;
   -webkit-box-shadow: 0px 3px 5px #333333;
   -moz-box-shadow: 0px 3px 5px #333333;
   box-shadow: 0px 3px 5px #333333;
+
+  footer#mainfooter {
+    width: $wrap_width;
+    bottom: 0;
+    position: absolute;
+
+    section {
+      font-family: DroidSansRegular;
+      float: left;
+      margin-left: 10px;
+      margin-right: 12%;
+      &:last-child {
+        margin-right: 0;
+        float: right;
+      }
+    }
+  }
 }
 
 header#main {
@@ -160,11 +186,13 @@ section#content {
     margin: 10px;
     float: left;
     text-align: justify;
-    width: 500px
+    width: 600px
   }
+
   br.clear {
     clear: both;
   }
+
   footer {
     section {
       font-family: DroidSansRegular;

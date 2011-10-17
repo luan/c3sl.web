@@ -19,5 +19,6 @@
         #shadow
         = yield
         %br.clear
-      %footer
-      
+      %footer#mainfooter
+        = content_tag :div, yield(:footer)
+

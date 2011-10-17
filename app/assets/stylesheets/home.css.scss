@@ -1,3 +1,16 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+aside#recents{
+  float: right;
+  width: 240px;
+  padding: 0px 0px 0px 0px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
