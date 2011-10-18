@@ -34,6 +34,8 @@
 $wrap_width: 978px;
 
 html, body {
+  padding: 0px;
+  margin: 0px;
   height: 100%;
 }
 
@@ -56,6 +58,10 @@ div#wrap {
   -webkit-box-shadow: 0px 3px 5px #333333;
   -moz-box-shadow: 0px 3px 5px #333333;
   box-shadow: 0px 3px 5px #333333;
+
+  br.clear {
+    clear: both;
+  }
 
   footer#mainfooter {
     width: $wrap_width;
@@ -169,6 +175,9 @@ nav#menu {
 
 section#content {
   padding: 5px;
+  padding: 10px;
+  padding-bottom: 120px;
+
   article {
     margin: 10px;
     text-align: justify;
@@ -186,23 +195,6 @@ section#content {
     margin: 10px;
     float: left;
     text-align: justify;
-    width: 600px
-  }
-
-  br.clear {
-    clear: both;
-  }
-
-  footer {
-    section {
-      font-family: DroidSansRegular;
-      float: left;
-      margin-left: 10px;
-      margin-right: 12%;
-      &:last-child {
-        margin-right: 0;
-        float: right;
-      }
-    }
+    width: 600px;
   }
 }
