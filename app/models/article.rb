@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  has_attached_file :image
+  has_attached_file :image, :styles => { :thumb => "64x64#", :normal => "256x256#" }
 
   validates_presence_of :title, :body, :published_at
 

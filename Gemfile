@@ -29,3 +29,4 @@ gem "devise"
 gem "paperclip", "~> 2.4"
 gem 'rails-i18n'
 gem 'awesome_nested_set'
+gem 'thin'

@@ -1,0 +1,10 @@
+%article#article
+  %header
+    %h1= @article.title
+    %h2= @article.headline
+  %p
+    = image_tag @article.image.url(:normal)
+  %p
+    = @article.body
+  %footer
+    = l(@article.published_at, :format => :long)

@@ -1,8 +1,9 @@
 C3sl::Application.routes.draw do
-
-  match "articles" => "articles#index"
-
+  resources :projects, :only => [:show]
+  resources :researches, :only => [:index]
   resources :mirrors
+  resources :articles, :only => [:index, :show]
+  resources :people, :only => [:index]
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

@@ -2,12 +2,15 @@
   %header
     %h1 Todas Notícias
   - @articles.keys.sort.reverse.each do |year|
-    %article.year
+    %section.year
       %header
         %h2= l(year, :format => :year)
       - @articles[year].keys.sort.reverse.each do |month|
-        %h2= l(month, :format => :month)
-        - for article in @articles[year][month] do
-          %p
-            = l(article.published_at)
-            = link_to article.title, "#"
+        %article.month
+          %header
+            %h2= l(month, :format => :month)
+          - for article in @articles[year][month] do
+            %div.articles
+              %p
+                = image_tag article.image.url(:thumb)
+                = link_to article.title, article_path(article)
