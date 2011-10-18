@@ -1,0 +1,8 @@
+%h1 Todas Notícias
+
+- @articles_month.keys.sort.each do |month|
+  %h2= l(month, :format => :month)
+  - for article in @articles_month[month] do
+    %p
+      = l(article.published_at)
+      = link_to article.title, "#"

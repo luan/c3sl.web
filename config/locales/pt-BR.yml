@@ -1,4 +1,9 @@
 pt-BR:
+  date:
+    formats:
+      month: "%B"
+      year: "%Y"
+
   admin:
     dashboard:
       navigation: Navegação

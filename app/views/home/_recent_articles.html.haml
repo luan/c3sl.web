@@ -3,3 +3,5 @@
   %ul
     - @articles.each do |article|
       %li= link_to article.title, "#"
+  %p
+    = link_to "Todas nóticias", articles_path

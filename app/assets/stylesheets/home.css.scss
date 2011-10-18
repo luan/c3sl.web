@@ -6,11 +6,16 @@
 aside#recents{
   float: right;
   width: 240px;
-  padding: 0px 0px 0px 0px;
+  padding: 10px;
+  border: 1px solid green;
 
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  p{
+    text-align: right;
   }
 }

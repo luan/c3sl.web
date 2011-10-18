@@ -1,4 +1,7 @@
 C3sl::Application.routes.draw do
+
+  match "articles" => "articles#index"
+
   resources :mirrors
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
