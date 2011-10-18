@@ -16,6 +16,7 @@ end
 gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
 
 group :development do
+  gem "faker"
   gem "guard"
   gem "guard-rspec"
 end

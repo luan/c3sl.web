@@ -6,4 +6,13 @@ class Article < ActiveRecord::Base
   default_scope :order => "published_at DESC"
   scope :published, lambda { where("published_at <= ?", Date.today) }
   scope :lastest, lambda { |n| published.limit(n) }
+
+  def self.group_published
+    articles = Article.published.group_by { |article| article.published_at.beginning_of_year }
+
+    articles.each do |key, value|
+      articles[key] = value.group_by { |article| article.published_at.beginning_of_month }
+    end
+    articles
+  end
 end

@@ -1,8 +1,13 @@
-%h1 Todas Notícias
-
-- @articles_month.keys.sort.each do |month|
-  %h2= l(month, :format => :month)
-  - for article in @articles_month[month] do
-    %p
-      = l(article.published_at)
-      = link_to article.title, "#"
+%section#news
+  %header
+    %h1 Todas Notícias
+  - @articles.keys.sort.reverse.each do |year|
+    %article.year
+      %header
+        %h2= l(year, :format => :year)
+      - @articles[year].keys.sort.reverse.each do |month|
+        %h2= l(month, :format => :month)
+        - for article in @articles[year][month] do
+          %p
+            = l(article.published_at)
+            = link_to article.title, "#"
