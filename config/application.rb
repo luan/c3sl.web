@@ -59,3 +59,6 @@ module C3sl
     config.assets.version = '1.0'
   end
 end
+
+I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
+I18n.locale = :'pt-BR'
