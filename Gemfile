@@ -31,3 +31,4 @@ gem "paperclip"
 gem 'rails-i18n'
 gem 'awesome_nested_set'
 gem 'thin'
+gem 'faker'
