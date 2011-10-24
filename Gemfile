@@ -1,7 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.1.0'
-
-gem 'sqlite3'
+gem 'rails', '3.1.1'
 
 gem "haml"
 gem "haml-rails"
@@ -19,14 +17,17 @@ group :development do
   gem "faker"
   gem "guard"
   gem "guard-rspec"
+  gem 'sqlite3'
 end
 
 gem "rspec-rails", :group => [:development, :test]
 gem "capybara", :group => [:development, :test]
 gem "factory_girl_rails", :group => :test
 
+gem 'pg', :group => :production
+
 gem "devise"
-gem "paperclip", "~> 2.4"
+gem "paperclip"
 gem 'rails-i18n'
 gem 'awesome_nested_set'
 gem 'thin'
