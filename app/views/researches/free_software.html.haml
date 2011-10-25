@@ -1,0 +1,7 @@
+%div
+  = @research.description.html_safe
+%p
+  Além dos projetos de pesquisa, o grupo também tem projetos de apoio na migração de sistemas para Software Livre:
+%ul
+  - for project in @projects
+    %li= project.title

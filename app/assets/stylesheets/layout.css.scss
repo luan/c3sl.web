@@ -40,7 +40,7 @@ html, body {
 }
 
 body {
-  font: normal 14px Arial, Helvetica, sans-serif;
+  font: normal 14px DroidSans, Helvetica, sans-serif;
   color: 333;
   background: #9CB70A;
   background: image-url('bg.png') repeat;
@@ -128,6 +128,7 @@ header#main {
 }
 
 nav#menu {
+  font: bold 13px DroidSansBold, Verdana,sans-serif;
   position: relative;
   bottom: 20px;
   float: right;
@@ -138,7 +139,6 @@ nav#menu {
   border-radius: 15px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  font: bold 13px DroidSansBold, Verdana,sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: #bee092;
@@ -177,6 +177,19 @@ section#content {
   padding: 5px;
   padding: 10px;
   padding-bottom: 120px;
+
+  a {
+    color: #1d708c;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover{
+      color: #17586e;
+      transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      -moz-transform: scale(1.02);
+      -o-transform: scale(1.02);
+    }
+  }
 
   article {
     margin: 10px;

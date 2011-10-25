@@ -5,6 +5,8 @@ C3sl::Application.routes.draw do
   resources :articles, :only => [:index, :show]
   resources :people, :only => [:index]
 
+  match "researches/free-software" => "researches#free_software", :as => "free_software"
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users

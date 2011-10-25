@@ -23,6 +23,20 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Research do
+    edit do
+      include_all_fields
+    end
+    show do
+      field :description do
+        pretty_value do
+          value.html_safe
+        end
+      end
+      include_all_fields
+    end
+  end
+
   #  ==> Authentication (before_filter)
   # This is run inside the controller instance so you can setup any authentication you need to.
   # By default, the authentication will run via warden if available.
