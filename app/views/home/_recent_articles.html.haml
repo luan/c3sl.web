@@ -1,7 +1,10 @@
-%aside#recents
-  %h1 Últimas notícias
-  %ul
+%aside#news-menu
+  %section
+    %header
+      %h1 Últimas Notícias
     - @articles.each do |article|
-      %li= link_to article.title, article_path(article)
-  %p
-    = link_to "Todas nóticias", articles_path
+      %article{:class => "news-item"}
+        %header
+          %h1= link_to article.title, article_path(article)
+        %p
+          =l(article.published_at, :format => :long)

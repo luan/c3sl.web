@@ -3,6 +3,9 @@
     %title C3SL - Centro de Computação Científica e Software Livre
     = stylesheet_link_tag :application
     = javascript_include_tag :application
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
     = csrf_meta_tags
   %body
     #wrap
@@ -18,9 +21,8 @@
           %li= link_to "equipe", people_path
           %li= link_to "espelhos", mirrors_path
       %section#content
-        #shadow
         = yield
         %br.clear
-      %footer#mainfooter
+      %footer#pagefooter
         = content_tag :div, yield(:footer)
 

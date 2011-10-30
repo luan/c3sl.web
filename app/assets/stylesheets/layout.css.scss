@@ -39,6 +39,10 @@ html, body {
   height: 100%;
 }
 
+#wrap{ min-height: 100%; }
+
+* html #wrap{ height: 100%}
+
 body {
   font: normal 14px DroidSans, Helvetica, sans-serif;
   color: 333;
@@ -48,37 +52,14 @@ body {
 }
 
 div#wrap {
-  min-height: 100%;
-  position: relative;
-
-  margin: auto;
-  padding: 0;
+  position:relative; /* needed for footer positioning*/
+  margin:0 auto; /* center, not in IE5 */
   width: $wrap_width;
+
   background: #ffffff;
   -webkit-box-shadow: 0px 3px 5px #333333;
   -moz-box-shadow: 0px 3px 5px #333333;
   box-shadow: 0px 3px 5px #333333;
-
-  br.clear {
-    clear: both;
-  }
-
-  footer#mainfooter {
-    width: $wrap_width;
-    bottom: 0;
-    position: absolute;
-
-    section {
-      font-family: DroidSansRegular;
-      float: left;
-      margin-left: 10px;
-      margin-right: 12%;
-      &:last-child {
-        margin-right: 0;
-        float: right;
-      }
-    }
-  }
 }
 
 header#main {
@@ -174,9 +155,8 @@ nav#menu {
 }
 
 section#content {
-  padding: 5px;
-  padding: 10px;
-  padding-bottom: 120px;
+  padding:1em 1em 3em; /* bottom padding for footer */
+  margin-top:10px;
 
   a {
     color: #1d708c;
@@ -195,19 +175,25 @@ section#content {
     margin: 10px;
     text-align: justify;
   }
-  article#mirrors {
-    ul {
-      padding: 0;
-      list-style: none;
-      li > a {
-        float: left;
-      }
-    }
-  }
-  article#home {
-    margin: 10px;
+}
+
+br.clear {
+  clear: both;
+}
+
+footer#pagefooter{
+  position:absolute;
+  bottom:0; /* stick to bottom */
+  width: $wrap_width;
+
+  section {
+    font-family: DroidSansRegular;
+    margin-left: 10px;
+    margin-right: 12%;
     float: left;
-    text-align: justify;
-    width: 600px;
+    &:last-child {
+      margin-right: 0;
+      float: right;
+    }
   }
 }
