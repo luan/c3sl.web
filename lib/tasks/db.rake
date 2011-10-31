@@ -57,14 +57,6 @@ namespace :db do
         )
       end
     end
-
-    5.times do
-      Project.create(
-        :title => Faker::Name.title,
-        :body => Faker::Lorem.paragraphs(2),
-        :research_id => fsr.id
-      )
-    end
   end
 
   def create_people(n, category, options = nil)
