@@ -17,6 +17,7 @@ end
 
 module C3sl
   class Application < Rails::Application
+    config.middleware.use Rack::Pjax
 
     # don't generate RSpec tests for views and helpers
     config.generators do |g|

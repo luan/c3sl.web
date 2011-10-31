@@ -46,6 +46,7 @@ namespace :db do
         :image => File.open(Dir.glob(File.join(Rails.root, 'spec/images', '*')).sample)
       )
     end
+    fsr = Research.create(:title => 'Software Livre', :description => '')
 
     Research.all.each do |research|
       5.times do
@@ -60,7 +61,8 @@ namespace :db do
     5.times do
       Project.create(
         :title => Faker::Name.title,
-        :body => Faker::Lorem.paragraphs(2)
+        :body => Faker::Lorem.paragraphs(2),
+        :research_id => fsr.id
       )
     end
   end

@@ -20,9 +20,10 @@
           %li= link_to "software livre", free_software_path
           %li= link_to "equipe", people_path
           %li= link_to "espelhos", mirrors_path
-      %section#content
-        = yield
-        %br.clear
-      %footer#pagefooter
-        = content_tag :div, yield(:footer)
+      %div{'data-pjax-container' => true}
+        %section#content
+          = yield
+          %br.clear
+        %footer#pagefooter
+          = content_tag :div, yield(:footer)
 

@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem "haml"
 gem "haml-rails"
 gem "jquery-rails"
+gem 'rack-pjax'
 
 group :assets do
   gem 'sass-rails'
@@ -21,8 +22,8 @@ group :development do
 end
 
 gem "rspec-rails", :group => [:development, :test]
-gem "capybara", :group => [:development, :test]
-gem "factory_girl_rails", :group => :test
+# gem "capybara", :group => [:development, :test]
+# gem "factory_girl_rails", :group => :test
 
 gem 'pg', :group => :production
 
