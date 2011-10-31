@@ -46,7 +46,7 @@ namespace :db do
         :image => File.open(Dir.glob(File.join(Rails.root, 'spec/images', '*')).sample)
       )
     end
-    fsr = Research.create(:title => 'Software Livre', :description => '')
+    fsr = Research.create(:title => 'Software Livre', :description => 'O C3SL desenvolve todos os seus projetos de pesquisa em software livre, porque acredita que sua força não está no capital, mas na ética do compartilhamento. Um software é considerado como livre quando atende aos quatro tipos de liberdade para os usuários do software definidas pela Free Software Foundation:')
 
     Research.all.each do |research|
       5.times do
