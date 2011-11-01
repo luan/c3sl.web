@@ -1,20 +1,20 @@
-%section#mirros-descricption
-  %article
-    %header
-      %h1 Espelhos
-    %p Um dos objetivos do C3SL é a difusão de software livre. Por isso uma das atividades desenvolvidas com freqüência é a incorporação de novos espelhos de grandes repositórios de software livre, tais como distribuições linux e sourceforge, para manutenção. A disponibilidade desses espelhos aumenta a velocidade de download (acesso) pelos usuários, principalmente do Brasil e do restante da América Latina, contribuindo para sua disseminação.
+%section
+  %header
+    %h1 Espelhos
 
-  %section#mirros
-    %header
-      %h1 Espelhos hospedados:
-    - for mirror in @mirrors
-      %section#mirror
-        %aside
-          = link_to image_tag(mirror.image.url(:thumb)), mirror.link
-        %article
-          %header
-            %h1
-              %strong= mirror.name
-          %p= raw mirror.description if mirror.description
-          %p= link_to mirror.link, mirror.link
-        %br.clear
+  %p Um dos objetivos do C3SL é a difusão de software livre. Por isso uma das atividades desenvolvidas com freqüência é a incorporação de novos espelhos de grandes repositórios de software livre, tais como distribuições linux e sourceforge, para manutenção. A disponibilidade desses espelhos aumenta a velocidade de download (acesso) pelos usuários, principalmente do Brasil e do restante da América Latina, contribuindo para sua disseminação.
+
+%section#mirros
+  %header
+    %h1 Espelhos hospedados:
+  - for mirror in @mirrors
+    %section.list
+      %aside
+        = link_to image_tag(mirror.image.url(:thumb), :class => :aside), mirror.link
+      %article.list
+        %header
+          %h1.subtitle
+            %strong= mirror.name
+        %p= raw mirror.description if mirror.description
+        %p= link_to mirror.link, mirror.link
+      %br.clear

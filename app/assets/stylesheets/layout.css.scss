@@ -1,3 +1,5 @@
+@import 'mixins';
+
 @font-face {
   font-family: 'Santana';
   src: url('/fonts/Santana-webfont.eot');
@@ -160,7 +162,7 @@ nav#menu {
 }
 
 section#content {
-  padding: 1em 1em 3em; /* bottom padding for footer */
+  padding: 20px 20px 80px; /* bottom padding for footer */
   margin-top: 10px;
 
   a {
@@ -201,12 +203,43 @@ footer#pagefooter{
 
   section {
     font-family: DroidSansRegular;
-    margin-left: 10px;
-    margin-right: 12%;
+    margin-left: 20px;
+    margin-right: 8%;
+    line-height: 10px;
     float: left;
     &:last-child {
-      margin-right: 0;
+      margin-right: 20px;
+      margin-bottom: 5px;
       float: right;
     }
   }
+}
+
+/**** PAGE STYLE ****/
+
+h1.subtitle {
+  color: #64645D;
+  font-family: 'DroidSansBold',Verdana,sans-serif;
+  font-size: 16px;
+  text-shadow: 1px 1px 1px white;
+}
+
+h2.subtitle {
+  @extend h1.subtitle;
+  font-size: 14px;
+}
+
+section.list{
+  margin-top: 15px;
+  background: none repeat scroll 0 0 #F1FFDE;
+  border-radius: 10px 10px 10px 10px;
+  border-top: 1px dotted #CCCCCC;
+}
+
+img.aside {
+  @include side-box;
+}
+
+aside.aside {
+  @include side-box;
 }

@@ -4,9 +4,6 @@
 
 // must be overriden for the right position of the footer
 // TODO: this just for home controller
-section#content {
-  padding-bottom: 10em; /* bottom padding for footer */
-}
 
 article#home {
   margin: 10px;
@@ -42,6 +39,7 @@ aside#news-menu {
 
   div.right {
     text-align: right;
+    padding-right: 5px;
   }
 
   article.news-item {

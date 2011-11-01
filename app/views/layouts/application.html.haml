@@ -20,10 +20,17 @@
           %li= link_to "software livre", free_software_path
           %li= link_to "equipe", people_path
           %li= link_to "espelhos", mirrors_path
-      %div{'data-pjax-container' => true}
-        %section#content
-          = yield
-          %br.clear
-        %footer#pagefooter
-          = content_tag :div, yield(:footer)
-
+      %section#content{'data-pjax-container' => true}
+        = yield
+        %br.clear
+      %footer#pagefooter
+        %section#address
+          %p Depto. de Informática - UFPR - Centro Politécnico
+          %p Jardim das Américas Cx. Postal 19081 CEP 81531-980
+          %p Curitiba - PR - Brasil
+        %section#contact
+          %p Fone: +55 41 3361 3567
+          %p Fax: +55 41 3361 3205
+          %p E-mail: contato@c3sl.ufpr.br
+        %section#image
+          = image_tag('ufpr.png')

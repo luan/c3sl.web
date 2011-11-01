@@ -1,0 +1,16 @@
+@mixin side-box {
+   float: left;
+   border: 3px solid #333;
+   box-shadow: -2px 2px 2px #ccc;
+   margin: 20px;
+   -webkit-transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -o-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
+   &:hover {
+     -webkit-transform: scale(1.2) rotate(-2deg);
+     -moz-transform: scale(1.2) rotate(-2deg);
+     -o-transform: scale(1.2) rotate(-2deg);
+     transform: scale(1.2) rotate(-2deg);
+   }
+}

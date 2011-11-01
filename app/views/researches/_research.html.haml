@@ -1,8 +1,9 @@
 %article
-  = image_tag research.image.url(:thumb)
+  - if research.image?
+    = image_tag research.image.url(:thumb), :class => :aside
   %div
     %header
-      %h1= research.title
+      %h1.subtitle= research.title
     %p= raw research.description
     %h3 Projetos:
     %ul

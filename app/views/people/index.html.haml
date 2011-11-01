@@ -5,17 +5,22 @@
     %p
       Nossa equipe é composta por pesquisadores que compartilham experiência de mais de uma década em desenvolvimento de tecnologias de computação científica e software livre. Professores e estudantes de diferentes áreas caracterizam nossa estrutura multidisciplinar e comprovam nossa qualidade técnica e científica. Veja ao lado quem são eles.
 
-  %article
+  %section.left
     %ul
       - @categories.each do |category|
         %li= link_to category.name, people_path(:category_id => category.id)
-
-    - if @people
-      %article
-        %ul
-          - @people.keys.sort.each do |category|
-            %article
-              %header
-                %h1= @people[category].first.category.name
-              - for person in @people[category]
-                %li= person.name
+  - if @people
+    %section
+      - @people.keys.sort.each do |category|
+        %article.left
+          %header
+            %h1.subtitle= @people[category].first.category.name
+          - for person in @people[category]
+            %p
+              - if person.link.present?
+                = link_to person.name, person.link
+              - else
+                = person.name
+              %span
+                = person.degree
+      .br.clear

@@ -2,11 +2,74 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'mixins';
+
 section#all-news {
-  .month{
-    padding-left: 15px;
-    .articles{
-      padding-left: 15px;
+  aside {
+    img.aside {
+      margin-top: 0;
+      margin-bottom: 0;
     }
+    div.date {
+      @include side-box;
+      background-image: linear-gradient(bottom, rgb(119,120,116) 0%, rgb(43,42,43) 52%);
+      background-image: -o-linear-gradient(bottom, rgb(119,120,116) 0%, rgb(43,42,43) 52%);
+      background-image: -moz-linear-gradient(bottom, rgb(119,120,116) 0%, rgb(43,42,43) 52%);
+      background-image: -webkit-linear-gradient(bottom, rgb(119,120,116) 0%, rgb(43,42,43) 52%);
+      background-image: -ms-linear-gradient(bottom, rgb(119,120,116) 0%, rgb(43,42,43) 52%);
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 128px;
+      width: 128px;
+      color: white;
+      font-family: DroidSansBold, sans-serif;
+      font-size: 23px;
+      text-align: center;
+      line-height: 13px;
+    }
+  }
+  header {
+    h1.subtitle {
+      margin: 0;
+    }
+  }
+  article {
+   margin-bottom: 0;
+   & > p {
+     margin-bottom: 0px;
+   }
+  }
+  footer {
+    font: normal 13px "DroidSansBold", Verdana, sans-serif;
+    color: #98988C;
+    text-transform: uppercase;
+    margin: 0;
+    margin-right: 20px;
+    float: right;
+    clear: both;
+  }
+  & > section {
+    height: 154px;
+    padding-top: 20px;
+    margin-top: 15px;
+  }
+}
+
+section#article{
+  padding: 10px;
+  min-height: 276px;
+  padding-bottom: 20px;
+
+  header{
+    padding-top: 1px;
+  }
+
+  footer {
+    font: normal 13px "DroidSansBold", Verdana, sans-serif;
+    color: #98988C;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    float: right;
   }
 }

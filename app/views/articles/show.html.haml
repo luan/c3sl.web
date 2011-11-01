@@ -1,11 +1,13 @@
-%section#article
+%section#article{:class => :list}
+  %aside
+    - if @article.image?
+      = image_tag @article.image.url(:normal), :class => :aside
   %header
     %h1= @article.title
     %h2= @article.headline
   %article
     %p
-      = image_tag @article.image.url(:normal)
-    %p
       = raw @article.body
   %footer
+    Publicado em
     = l(@article.published_at, :format => :long)

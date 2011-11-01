@@ -1,16 +1,24 @@
 %section#all-news
   %header
-    %h1 Todas Notícias
-  - @articles.keys.sort.reverse.each do |year|
-    %section.year
+    %h1 Todas as Notícias
+  - for article in @articles
+    %section.list
+      %aside
+        - if article.image?
+          = link_to image_tag(article.image.url(:small), class: 'aside'), article
+        - else
+          - link = capture do
+            .date
+              - date = article.published_at.to_date
+              %p= date.year
+              %p= l date, format: :month
+              %p= date.day
+          = link_to link, article
       %header
-        %h2= l(year, :format => :year)
-      - @articles[year].keys.sort.reverse.each do |month|
-        %article.month
-          %header
-            %h2= l(month, :format => :month)
-          - for article in @articles[year][month] do
-            %div.articles
-              %p
-                = image_tag article.image.url(:thumb)
-                = link_to article.title, article_path(article)
+        %h1.subtitle= link_to article.title, article
+        %h2.subtitle= article.headline
+      %article
+        %p= truncate_html raw(article.body), :length => 315
+      %footer
+        %span= l article.published_at, format: :long
+    %br.clear

@@ -1,36 +1,17 @@
 // Place all the styles related to the mirrors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-section#mirros-descricption{
-  header {
-     h1{
-      font-size: 20pt;
-     }
-  }
-}
-section#mirros {
-  margin-left: 10px;
-  header {
-    h1{
-      font-size: 20pt;
-    }
-  }
-  section#mirror {
-    border-bottom: 1px solid #DDD;
-    > aside {
-      float: left;
-      margin-right: 15px;
-    }
 
+section#mirros {
+  section {
     article {
       header {
         h1{
           margin: 0px;
+          margin-top: 20px;
           padding: 0px;
-          font-size: 15pt;
         }
       }
-      padding: 0 10px;
       min-height: 140px;
     }
   }

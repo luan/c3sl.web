@@ -1,3 +1,29 @@
 // Place all the styles related to the people controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+section#team{
+  .left{
+    margin-top: 10px;
+    padding-left: 0px;
+    float: left;
+    ul{
+      margin-top: 25px;
+      list-style: none;
+      padding-left: 0;
+    }
+  }
+  article.left{
+    padding-left: 50px;
+    float: left;
+    line-height: 10px;
+    p span {
+      font: normal 13px "DroidSansBold", Verdana, sans-serif;
+      color: #98988C;
+      text-transform: uppercase;
+    }
+  }
+}
+
