@@ -8,3 +8,4 @@
           %h1= link_to article.title, article_path(article)
         %p
           =l(article.published_at, :format => :long)
+    %div.right= link_to "Todas Notícias", articles_path
