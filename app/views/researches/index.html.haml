@@ -3,11 +3,4 @@
     %h1 Pesquisa
     %p Os projetos de pesquisa do C3SL tem caráter multidisciplinar abrangendo diversas áreas da computação. Vários projetos são resultados de parcerias com órgãos públicos e privados do Brasil e do exterior que geraram demandas desafiadoras e temas de caráter ao mesmo tempo inovador e com foco social. As principais linhas de pesquisa são divididas em cinco ênfases:
   %section#researches
-    - for research in @researches
-      %article
-        %p= image_tag research.image.url(:thumb)
-        %p= research.title
-        %p= raw research.description
-        %ul
-          - for project in research.projects
-            %li= link_to project.title, project
+    = render partial: 'research', collection: @researches

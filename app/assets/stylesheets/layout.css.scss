@@ -44,7 +44,7 @@ html, body {
 * html #wrap{ height: 100%}
 
 body {
-  font: normal 14px DroidSans, Helvetica, sans-serif;
+  font: normal 14px DroidSansRegular, Helvetica, sans-serif;
   color: 333;
   background: #9CB70A;
   background: image-url('bg.png') repeat;
@@ -178,9 +178,10 @@ section#content {
   }
 
   & > section > header > h1 {
+    color: #17586E;
     font-family: 'Santana', sans-serif;
-    font-size: 25px;
-    text-shadow: -1px -1px 1px black;
+    font-size: 28px;
+    text-shadow: -1px -1px 1px #666;
   }
 
   article {
