@@ -167,12 +167,13 @@ section#content {
     color: #1d708c;
     font-weight: bold;
     text-decoration: none;
+
     &:hover{
       color: #17586e;
-      transform: scale(1.02);
       -webkit-transform: scale(1.02);
       -moz-transform: scale(1.02);
       -o-transform: scale(1.02);
+      transform: scale(1.02);
     }
   }
 
