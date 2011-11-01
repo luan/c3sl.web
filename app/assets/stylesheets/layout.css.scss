@@ -160,20 +160,27 @@ nav#menu {
 }
 
 section#content {
-  padding:1em 1em 3em; /* bottom padding for footer */
-  margin-top:10px;
+  padding: 1em 1em 3em; /* bottom padding for footer */
+  margin-top: 10px;
 
   a {
     color: #1d708c;
     font-weight: bold;
     text-decoration: none;
+
     &:hover{
       color: #17586e;
-      transform: scale(1.02);
       -webkit-transform: scale(1.02);
       -moz-transform: scale(1.02);
       -o-transform: scale(1.02);
+      transform: scale(1.02);
     }
+  }
+
+  & > section > header > h1 {
+    font-family: 'Santana', sans-serif;
+    font-size: 25px;
+    text-shadow: -1px -1px 1px black;
   }
 
   article {
@@ -187,8 +194,8 @@ br.clear {
 }
 
 footer#pagefooter{
-  position:absolute;
-  bottom:0; /* stick to bottom */
+  position: absolute;
+  bottom: 0; /* stick to bottom */
   width: $wrap_width;
 
   section {
