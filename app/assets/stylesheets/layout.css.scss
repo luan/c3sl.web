@@ -160,8 +160,8 @@ nav#menu {
 }
 
 section#content {
-  padding:1em 1em 3em; /* bottom padding for footer */
-  margin-top:10px;
+  padding: 1em 1em 3em; /* bottom padding for footer */
+  margin-top: 10px;
 
   a {
     color: #1d708c;
@@ -176,6 +176,12 @@ section#content {
     }
   }
 
+  & > section > header > h1 {
+    font-family: 'Santana', sans-serif;
+    font-size: 25px;
+    text-shadow: -1px -1px 1px black;
+  }
+
   article {
     margin: 10px;
     text-align: justify;
@@ -187,8 +193,8 @@ br.clear {
 }
 
 footer#pagefooter{
-  position:absolute;
-  bottom:0; /* stick to bottom */
+  position: absolute;
+  bottom: 0; /* stick to bottom */
   width: $wrap_width;
 
   section {
