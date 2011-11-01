@@ -149,6 +149,11 @@ nav#menu {
           color: #17586E;
           background: #EFEFE9;
         }
+        &.current {
+          color: #6E686E;
+          background: #add081;
+          border-radius: 3px;
+        }
       }
     }
   }

@@ -9,5 +9,12 @@
 #= require jquery_ujs
 #= require jquery.pjax
 #= require_tree .
+
+setActiveMenu = () ->
+  $("nav#menu > ul > li > a").removeClass("current")
+  $("nav#menu > ul > li > a[href='" + location.pathname + "']").addClass("current")
+
 jQuery ->
+  setActiveMenu()
   $('body a').pjax('[data-pjax-container]')
+  $('[data-pjax-container]').bind('end.pjax', setActiveMenu)
