@@ -1,7 +1,6 @@
-%div
-  = raw @research.description
-%p
-  Além dos projetos de pesquisa, o grupo também tem projetos de apoio na migração de sistemas para Software Livre:
-%ul
-  - for project in @projects
-    %li= project.title
+%section#free-software
+  %header
+    %h1 Software livre
+    %p Além dos projetos de pesquisa, o grupo também tem projetos de apoio na migração de sistemas para Software Livre:
+  %section#researches
+    = render partial: 'research', locals: { research: @research }
