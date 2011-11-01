@@ -7,7 +7,7 @@
       %article
         %p= image_tag research.image.url(:thumb)
         %p= research.title
-        %p= research.description
+        %p= raw research.description
         %ul
           - for project in research.projects
             %li= link_to project.title, project

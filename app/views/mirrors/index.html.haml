@@ -8,7 +8,7 @@
         = link_to image_tag(mirror.image.url(:thumb)), mirror.link
         %p
           %strong= mirror.name
-        %p= mirror.description if mirror.description
+        %p= raw mirror.description if mirror.description
         %p
           = link_to mirror.link, mirror.link
         %br.clear

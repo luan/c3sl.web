@@ -5,6 +5,6 @@
   %p
     = image_tag @article.image.url(:normal)
   %p
-    = @article.body
+    = raw @article.body
   %footer
     = l(@article.published_at, :format => :long)

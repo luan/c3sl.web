@@ -20,6 +20,10 @@ RailsAdmin.config do |config|
       fields_of_type :datetime do
         date_format :compact
       end
+
+      fields_of_type :text do
+        ckeditor true
+      end
     end
   end
 

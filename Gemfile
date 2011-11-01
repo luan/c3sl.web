@@ -5,6 +5,7 @@ gem "haml"
 gem "haml-rails"
 gem "jquery-rails"
 gem 'rack-pjax'
+gem 'ckeditor'
 
 group :assets do
   gem 'sass-rails'
