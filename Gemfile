@@ -13,6 +13,7 @@ group :assets do
   gem 'uglifier'
 end
 
+gem 'paperclipdropbox', :git => "git://github.com/jguajardo/paperclipdropbox.git"
 gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
 
 group :development do
@@ -29,7 +30,7 @@ gem "rspec-rails", :group => [:development, :test]
 gem 'pg', :group => :production
 
 gem "devise"
-gem "paperclip"
+gem "paperclip", "2.4.4"
 gem 'rails-i18n'
 gem 'awesome_nested_set'
 gem 'thin'
