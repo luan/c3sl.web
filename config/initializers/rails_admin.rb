@@ -39,6 +39,19 @@ RailsAdmin.config do |config|
       end
       include_all_fields
     end
+
+
+    config.model Article do
+      edit do
+        include_all_fields
+        field :image do
+          thumb_method :thumb # for images. Will default to full size image, which might break the layout
+          delete_method :delete_image
+          # actually not needed in this case: default is "delete_#{field_name}" if the object responds to it
+        end
+      end
+    end
+
   end
 
   #  ==> Authentication (before_filter)

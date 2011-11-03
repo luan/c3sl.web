@@ -4,5 +4,5 @@ class Mirror < ActiveRecord::Base
                     :storage => :Dropboxstorage,
                     :path => "/:class/:attachment/:id/:style/:filename",
                     :url => "http://dl.dropbox.com/u/47883552/:class/:attachment/:id/:style/:filename"
-  validates_presence_of :name, :link
+  validates_presence_of :name, :link, :image
 end
